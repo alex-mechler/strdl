@@ -1,25 +1,28 @@
 class strdl_struct:
 
-    __slots__ = {"filename", "file_docs", "methods"}
+    __slots__ = {"filename", "file_docs", "functs"}
 
-    def strdl_struct(self, filename, file_docs, methods):
+    def __init__(self, filename, file_docs, functs):
         self.filename = filename
         self.file_docs = file_docs
-        self.methods = methods
+        self.functs = functs
 
 
 class strdl_method:
 
     __slots__ = {"name", "params"}
 
-    def strudl_method(self, name, params):
+    def __init__(self, name, params):
         self.name = name
         self.params = params
+
+    def __str__(self):
+        return self.name + ': ' + self.params
 
     def pretty_params(self) -> str:
         pretty = ''
         for param in self.params:
-            pretty += str(param.param) + ': ' + str(param.docs) + '\n'
+            pretty += str(param) + '\n'
         return pretty
 
 
@@ -27,6 +30,9 @@ class strdl_param:
 
     __slots__ = {"param", "docs"}
 
-    def strdl_param(self, param, docs):
+    def __init__(self, param, docs):
         self.param = param
         self.docs = docs
+
+    def __str__(self):
+        return self.param + ': ' + self.docs
