@@ -47,9 +47,9 @@ def get_params(funct_string) -> list:
         if 'param' in line:
             split = line.split(' ')
             docs = ''
-            for i in range(5, len(split)):
+            for i in range(6, len(split)):
                 docs += split[i] + ' '
-                functs.append(strdl_struct.strdl_param(split[4].strip(':').strip(), docs))
+            functs.append(strdl_struct.strdl_param(split[5].strip(':').strip(), docs))
     return functs
 
 
