@@ -16,14 +16,16 @@ class strdl_struct:
 
 class strdl_method:
 
-    __slots__ = {"name", "params"}
+    __slots__ = {'name', 'desc', 'params', 'return_doc'}
 
-    def __init__(self, name, params):
+    def __init__(self, name, desc, params, return_doc):
         self.name = name
+        self.desc = desc
         self.params = params
+        self.return_doc = return_doc
 
     def __str__(self):
-        return self.name + ': ' + self.params
+        return self.name + ': ' + self.desc + '\n' + self.params + '\n' + self.return_doc
 
     def pretty_params(self) -> str:
         pretty = ''
