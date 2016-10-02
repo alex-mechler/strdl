@@ -24,10 +24,11 @@ def get_params(funct_string) -> list:
             line.strip()
             if 'param' in line:
                 split = line.split(' ')
+                print(split)
                 docs = ''
-                for i in range(6, len(split)):
+                for i in range(5, len(split)):
                     docs += split[i] + ' '
-                functs.append(strdl_struct.strdl_param(split[0].strip(':'), docs))
+                functs.append(strdl_struct.strdl_param(split[4].strip(':').strip(), docs))
         return functs
 
 
@@ -44,5 +45,8 @@ def get_return(funct_string) -> str:
     ret = ''
     for line in funct_string.split('\n'):
         if 'return:' in line:
-            ret += line.strip('return:')
+            split = line.split();
+            if len(split) > 1:
+                for i in range(1, len(split)):
+                    ret += split[i] + ' '
     return ret
