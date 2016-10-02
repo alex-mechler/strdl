@@ -24,7 +24,6 @@ def get_params(funct_string) -> list:
             line.strip()
             if 'param' in line:
                 split = line.split(' ')
-                print(split)
                 docs = ''
                 for i in range(5, len(split)):
                     docs += split[i] + ' '
