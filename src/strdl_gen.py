@@ -21,7 +21,7 @@ def generate_file(struct):
 </tr>
 <tr>
 <td>&nbsp;Parameters</td>
-<td>&nbsp;'''
+<td>'''
 
     html_function_param = '''
 {PARAM}: {PARAM_DOC}
