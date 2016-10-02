@@ -1,4 +1,20 @@
+"""
+strdl is a HTML documentation generator for python file
+
+strdl_struct.py is a collection of classes that store the structure for a strdl documentation
+
+author: Alexander Mechler
+
+Copyright (C) 2016 Alexander Mechler
+
+Licenced under the MIT license
+"""
+
+
 class strdl_struct:
+    """
+    A class representing a full file.
+    """
 
     __slots__ = {"filename", "file_docs", "functs"}
 
@@ -15,6 +31,9 @@ class strdl_struct:
 
 
 class strdl_method:
+    """
+    A class representing an individual method
+    """
 
     __slots__ = {'name', 'desc', 'params', 'return_doc'}
 
@@ -35,6 +54,9 @@ class strdl_method:
 
 
 class strdl_param:
+    """
+    A class storing a single parameter of a method
+    """
 
     __slots__ = {"param", "docs"}
 

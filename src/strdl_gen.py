@@ -1,7 +1,22 @@
-import strdl_struct
+"""
+strdl is a HTML documentation generator for python file
+
+strdl_gen.py handles the generation of the HTML files
+
+author: Alexander Mechler
+
+Copyright (C) 2016 Alexander Mechler
+
+Licenced under the MIT license
+"""
 
 
 def generate_file(struct):
+    """
+    Generates an HTML strdl documentation of the file
+    :param struct: A strdl_struct to generate the HTML from
+    :return: None
+    """
     html = '';
     html_header = '''<p style="text-align: center;">{FILENAME}</p>
 <hr />
@@ -58,4 +73,3 @@ def generate_file(struct):
 
     with open(struct.filename + '.html', '+w') as f:
         f.write(html)
-    pass

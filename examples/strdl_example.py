@@ -1,4 +1,6 @@
-"""This is an example of strdl documentation"""
+"""
+This is an example of strdl documentation
+"""
 
 def function(parameter):
     """
