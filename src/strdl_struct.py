@@ -7,6 +7,12 @@ class strdl_struct:
         self.file_docs = file_docs
         self.functs = functs
 
+    def __str__(self):
+        pretty = self.filename + '\n' + self.file_docs + '\n'
+        for funct in self.functs:
+            pretty += funct.name + ':\n' + funct.pretty_params() + '\n'
+        return pretty
+
 
 class strdl_method:
 
